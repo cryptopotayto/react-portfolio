@@ -3,7 +3,6 @@ import './sign-in.styles.scss';
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils.js';
-import SignUp from '../sign-up/sign-up.component';
 
 class SignIn extends Component {
 	constructor(props) {
