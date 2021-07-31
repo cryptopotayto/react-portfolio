@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { withRouter } from 'react-router-dom';
 import { clearItemFromCart, addItem, removeItem } from '../../redux/cart/cart.actions';
-import Button from '../button/button.component';
+
 
 import './checkout-item.styles.scss';
 
@@ -20,7 +18,7 @@ const CheckOutItem = ({cartItem, clearItem, addItem, removeItem}) => {
       <span className='value'>{quantity}</span>
       <div className='arrow' onClick={() => addItem(cartItem)}>&#10095;</div>
       </span>
-      <span className='price'>{price}</span>      
+      <span className='price'>${price}</span>      
       <div className='remove-button' onClick={() => clearItem(cartItem)}>&#10005;</div>
     </div>
   );
